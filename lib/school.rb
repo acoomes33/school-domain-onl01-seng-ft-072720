@@ -1,6 +1,7 @@
 # code here!
 class School
-  attr_accessor :roster
+  attr_accessor :roster, :student_name, :grade
+  attr_reader :school_name
 
   def initialize(school_name)
     @school_name = name
@@ -9,13 +10,7 @@ class School
 
   
   def add_student(student_name, grade)
-    @student_name = student_name
-    @grade = grade
-    if !@roster.include?(grade)
-      @roster[grade] = []
-      @roster[grade] << student_name
-    else
-      @roster[grade] << student_name
+  
 end
   
   def grade(grade)
